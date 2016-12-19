@@ -50,13 +50,15 @@
 
 ### LoginHandler 
 #### Get 
-* Renders login page 
+* Renders login page
+ 
 #### Post 
 * Queries database for corresponding user 
 
 ### RegisterHandler 
 #### Get 
-* Renders register page 
+* Renders register page
+ 
 #### Post 
 * Adds user to database 
 
