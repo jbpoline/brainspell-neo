@@ -1,4 +1,4 @@
-## models.py
+# models.py
 
 ###Configuration 
 * database: specifies the heroku PostGres database added to Path 
