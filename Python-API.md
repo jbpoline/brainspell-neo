@@ -57,7 +57,7 @@
 ### RegisterHandler 
 #### Get 
 * Renders register page 
-####
+#### Post 
 * Adds user to database 
 
 ### Search Handler 
