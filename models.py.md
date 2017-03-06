@@ -1,12 +1,12 @@
 # models.py
 
 ###Configuration 
-* database: specifies the heroku PostGres database added to Path 
+* database: specifies the Heroku Postgres database
 * user: database username 
 * password: database password
 * host: database host site 
 * port: database port number 
-* sslmode: (required to instantiate PostGres database with ORM) 
+* sslmode: (required to instantiate Postgres database with ORM) 
 
 ### Class Articles (specifies columns of Brainspell Articles table) 
 * timestamp 
@@ -23,8 +23,8 @@
 ### Function article_search
 * query: a user inputted string 
 * start: an offset for the database 
-* return: ModelQueryResultWrapper --> an iterator over Article objects
-**Notes: **
+* return: ModelQueryResultWrapper
+**Notes:**
 * Matches against title, authors, and abstract columns 
 * Search holds a formed query before it is executed 
 
