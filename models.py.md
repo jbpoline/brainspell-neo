@@ -8,7 +8,7 @@
 * port: database port number 
 * sslmode: (required to instantiate Postgres database with ORM) 
 
-### Class Articles (specifies columns of Brainspell Articles table) 
+### Class Articles
 * timestamp 
 * abstract
 * doi (digital object identifier)
