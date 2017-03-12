@@ -1,7 +1,7 @@
 In this section:
 
 1. The specifics of the final decisions for the project organization (specifically what is in this git repo)  
-2. The API documentation
+2. The API documentation: https://docs.google.com/document/d/1PDRfxt4rymZ5Tt8J2Umo_uZGO1Q0VdgtS4KRUYGgL2U/edit?usp=sharing
 
 # brainspell.py
 
