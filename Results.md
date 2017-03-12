@@ -1,4 +1,5 @@
 In this section:
+
 1) The specifics of the final decisions for the project organization (specifically what is in this git repo)
 2) The API documentation
 
