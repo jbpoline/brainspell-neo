@@ -1,1 +1,0 @@
-This wiki is designed to give an overview of our project's organization, and to demonstrate how you can use the Brainspell JSON API.
