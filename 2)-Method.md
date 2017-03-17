@@ -14,6 +14,6 @@ Whichever database solution we chose, we needed it to offer a decent text search
 
 To modularize the database operations, we used the PeeWee ORM in Python. We separated the JSON API from the user interface, which makes AJAX requests to the API.
 
-## The Advantages of Our Solution
+## Advantages of Our Solution
 
 These design choices solve the problems that were raised in the Introduction. For one, the new version of Brainspell no longer runs out of memory when making requests with thousands of results (e.g., searching for the word "brain"). Switching away from an Apache web server and leveraging caching has made our new platform more scalable. Because the JSON API is effectively separate from the front end, if a developer wants to access the data from Brainspell, they no longer have to scrape and parse the HTML website; they can make a request directly to our JSON API. Since Python is a more popular, modern language for web development, we expect that it will be easier to find collaborators to work on the project.
