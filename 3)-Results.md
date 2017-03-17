@@ -1,6 +1,6 @@
 In this section:
 1. A detailed description of the repository structure
-2. A summary of important files within the repo
+2. An explanation of important files within the repo
 3. API documentation
 
 ## Repository Structure
