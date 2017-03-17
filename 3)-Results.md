@@ -42,3 +42,69 @@ The classes at the beginning of the file (`Articles`, `Concepts`, etc.) correspo
 The rest of `models.py` contains all functions that require database operations. This includes querying for articles, adding new users, etc.
 
 ## API Documentation
+
+### Search Brainspell's database
+
+<https://brainspell.herokuapp.com/json/query>
+
+*GET parameters:*
+* *q*: a search query, like you would type into Brainspell’s search bar
+* *start*: (default: 0) the number of results to offset by. The search endpoint gives ten results at a time. If you want results 11 - 20, then you would pass start = 10
+* *req*: (default: t) the type of search. (Options: t = title, author, and abstract; x = experiments; p = PubMed ID; r = reference)
+
+*Response format:*
+* *articles*: an array containing one element per article, each consisting of a title, id, and authors
+* *start_index*: the offset of the first article; if there are no articles left, then start_index will equal -1.
+
+Sample query: <https://brainspell.herokuapp.com/json/query?q=vision>
+
+### Get the contents of an article
+
+<https://brainspell.herokuapp.com/json/article>
+
+*GET parameters:*
+* *pmid*: a PubMed ID for an article, which can be obtained from the /query or /random-query endpoints
+
+*Response format:*
+* *pmid*: the PubMed ID for the article
+* *id*: the Brainspell ID for the article, for internal use only
+* *experiments*: a string consisting of a JSON object containing extracted coordinates from Neurosynth
+* *reference*: a citation for the article
+* *metadata*: a string consisting of a JSON object containing tags 
+
+Sample query: <https://brainspell.herokuapp.com/json/article?pmid=22521477>
+
+### Add an article to Brainspell's database
+
+<https://brainspell.herokuapp.com/json/add-article>
+
+*GET parameters:*
+* *pmid*: the PubMed ID for the article you want to add
+
+*Response format:*
+* *success*: a boolean indicator for whether the article was added successfully
+
+Sample query: <https://brainspell.herokuapp.com/json/add-article?pmid=22521477>
+
+### Add several articles at once to Brainspell's database
+
+<https://brainspell.herokuapp.com/json/bulk-add>
+
+*POST parameters:*
+* *articlesFile*: a JSON file containing a list of article “dictionaries,” with the format specified on the contribute page of Brainspell
+
+*Response format:*
+* *success*: a boolean indicator for whether the articles were added successfully
+
+Sample query: <https://brainspell.herokuapp.com/json/bulk-add>
+
+### Randomly sample five articles
+
+<https://brainspell.herokuapp.com/json/random-query>
+
+*Parameters:* None
+
+*Response format:*
+* *articles*: an array containing an element for each article, consisting of the authors, PMID, and title
+
+Sample query: <https://brainspell.herokuapp.com/json/random-query>
