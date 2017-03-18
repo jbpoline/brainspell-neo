@@ -6,7 +6,7 @@ In this section:
 ## Repository Structure
 
 In the root of the repository, there are three folders:
-* `archive`: contains scripts that aren't currently in use, but might be of use later, as well as examples of bulk additions to the database. 
+* `archive`: contains scripts that aren't currently in use, but might be of use later, as well as an example of a formatted file that can be passed to our `bulk-add` API endpoint (see below).
 * `database_dumps`: contains the entire Brainspell database as a MySQL dump, a PostgreSQL dump, and an XML file (which can be converted to JSON using the file `database_dumps/xmltojson.py`)
 * `json_api`: in which we do the vast majority of our development; in this folder is the Tornado web server code, our ORM code, static files, as well as processing scripts to create visualizations and display text. 
 
