@@ -1,4 +1,6 @@
-This purpose of this project is to create a platform to 1) facilitate the human-curation of neuroimaging literature and 2) provide tools for researchers to better perform meta-analyses.
+This purpose of this project is to create a platform to 
+*1) facilitate the human-curation of neuroimaging literature and 
+*2) provide tools for researchers to better perform meta-analyses.
 
 ## Why Brainspell?
 Brainspell is a platform for the crowd-sourced curation and annotation of neuroimaging literature. In recent years, the number of neuroimaging publications has increased substantially. These papers often have poor reproducibility, and they're difficult to properly parse for meta-analyses. Brainspell seeks to combine machine-parsed image data with users' annotations to curate a repository of neuroimaging literature.  
