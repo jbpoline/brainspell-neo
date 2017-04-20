@@ -79,6 +79,7 @@ Sample query: <https://brainspell.herokuapp.com/json/article?pmid=22521477>
 <https://brainspell.herokuapp.com/json/add-article>
 
 *GET parameters:*
+* *key*: a user's API key, which is provided to them after registration
 * *pmid*: the PubMed ID for the article you want to add
 
 *Response format:*
