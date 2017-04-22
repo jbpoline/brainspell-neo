@@ -85,7 +85,7 @@ Sample query: <https://brainspell.herokuapp.com/json/article?pmid=22521477>
 *Response format:*
 * *success*: a boolean indicator for whether the article was added successfully
 
-Sample query: <https://brainspell.herokuapp.com/json/add-article?pmid=22521477>
+Sample query: <https://brainspell.herokuapp.com/json/add-article?key={YOUR_KEY}&pmid=22521477>
 
 ### Add several articles at once to Brainspell's database
 
@@ -98,6 +98,20 @@ Sample query: <https://brainspell.herokuapp.com/json/add-article?pmid=22521477>
 * *success*: a boolean indicator for whether the articles were added successfully
 
 Sample query: <https://brainspell.herokuapp.com/json/bulk-add>
+
+### Update the authors for an article
+
+<https://brainspell.herokuapp.com/json/set-article-authors>
+
+*GET parameters:*
+* *key*: a user's API key, which is provided to them after registration
+* *pmid*: the PubMed ID for the article you want to add
+* *authors*: a comma-separated string of authors (e.g., "John Doe, John Doe Jr., John Doe Sr.")
+
+*Response format:*
+* *success*: a boolean indicator for whether the article was added successfully
+
+Sample query: <https://brainspell.herokuapp.com/json/set-article-authors?key={YOUR_KEY}&pmid=22521477&authors=A,B,C>
 
 ### Randomly sample five articles
 
