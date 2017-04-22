@@ -109,9 +109,55 @@ Sample query: <https://brainspell.herokuapp.com/json/bulk-add>
 * *authors*: a comma-separated string of authors (e.g., "John Doe, John Doe Jr., John Doe Sr.")
 
 *Response format:*
-* *success*: a boolean indicator for whether the article was added successfully
+* *success*: a boolean indicator for whether the authors were set successfully
 
 Sample query: <https://brainspell.herokuapp.com/json/set-article-authors?key={YOUR_KEY}&pmid=22521477&authors=A,B,C>
+
+
+### Add a row to an experiment table
+
+<https://brainspell.herokuapp.com/json/add-row>
+
+*GET parameters:*
+* *key*: a user's API key, which is provided to them after registration
+* *pmid*: the PubMed ID for the article you want to add
+* *experiment*: the zero-based index of the experiment that you want to add a row for (e.g., the first table has an index of 0, the second an index of 1, etc.)
+* *coordinates*: a comma-separated string of the x, y, and z coordinate to add (e.g., "3,4,5")
+
+*Response format:*
+* *success*: a boolean indicator for whether the row was added successfully
+
+Sample query: <https://brainspell.herokuapp.com/json/add-row?key={YOUR_KEY}&pmid=22521477&experiment=0&coordinates=1,2,3>
+
+### Delete a row from an experiment table
+
+<https://brainspell.herokuapp.com/json/add-row>
+
+*GET parameters:*
+* *key*: a user's API key, which is provided to them after registration
+* *pmid*: the PubMed ID for the article you want to add
+* *experiment*: the zero-based index of the experiment that you want to delete a row from (e.g., the first table has an index of 0, the second an index of 1, etc.)
+* *row*: the zero-based row that you want to delete (the first row is `row=0`)
+
+*Response format:*
+* *success*: a boolean indicator for whether the row was deleted successfully
+
+Sample query: <https://brainspell.herokuapp.com/json/delete-row?key={YOUR_KEY}&pmid=22521477&experiment=0&row=2>
+
+### Split an experiment table in an article
+
+<https://brainspell.herokuapp.com/json/split-table>
+
+*GET parameters:*
+* *key*: a user's API key, which is provided to them after registration
+* *pmid*: the PubMed ID for the article you want to add
+* *experiment*: the zero-based index of the experiment that you want to split the table for (e.g., the first table has an index of 0, the second an index of 1, etc.)
+* *row*: the zero-based row where you want to split the table on; if you specify `row=4`, then rows 0 - 3 will be in the first table, and rows 4 onwards will be in the second
+
+*Response format:*
+* *success*: a boolean indicator for whether the table was split successfully
+
+Sample query: <https://brainspell.herokuapp.com/json/split-table?key={YOUR_KEY}&pmid=22521477&experiment=0&row=2>
 
 ### Randomly sample five articles
 
