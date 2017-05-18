@@ -2,6 +2,7 @@ In this section:
 1. A detailed description of the repository structure
 2. An explanation of important files within the repo
 3. API documentation
+4. Collection feature description
 
 ## Repository Structure
 
@@ -169,3 +170,10 @@ Sample query: <https://brainspell.herokuapp.com/json/split-table?key={YOUR_KEY}&
 * *articles*: an array containing an element for each article, consisting of the authors, PMID, and title
 
 Sample query: <https://brainspell.herokuapp.com/json/random-query>
+
+
+## Collection features 
+
+
+
+
