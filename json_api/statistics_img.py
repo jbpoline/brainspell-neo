@@ -338,14 +338,14 @@ def significance_from_collections(
         brain_to_sum = get_boolean_map_from_pmid(pmid, width)
         brain.sum(brain_to_sum)
 
-    other_brain = Brain(total_samples=0)
+    other_brains = Brain(total_samples=0)
 
     if other_pmids is not None:
         # get the sample for other_pmids print("Generating cumulative Brain of
         # the articles in the other collection...")
         for pmid in other_pmids:
             brain_to_sum = get_boolean_map_from_pmid(pmid, width)
-            other_brain.sum(brain_to_sum)
+            other_brains.sum(brain_to_sum)
 
     else:
         all_articles = get_all_articles()
@@ -357,12 +357,12 @@ def significance_from_collections(
         for article in all_articles:
             if article.pmid not in article_checker:
                 brain_to_sum = get_boolean_map_from_article_object(
-                    article, width)
-                other_brain.sum(brain_to_sum)
+                                                            article, width)
+                other_brains.sum(brain_to_sum)
 
     # print("Calculating significance...")
     # calculate significance for each location, brain to other brain
-    brain.transform_to_z_scores(other_brain)
+    brain.transform_to_z_scores(other_brains)
 
     # convert to p values
     brain.transform_to_p_values()
